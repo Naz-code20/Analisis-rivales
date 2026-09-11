@@ -428,3 +428,23 @@ body {
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
 }
+/* Ajuste de Pantalla Completa para Video / Iframe */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantiene la proporción de video horizontal */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
