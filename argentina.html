@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis Rival: Argentina | Selección Bolivia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- ======================================================= -->
+    <!-- 🚩 BANDERA: ENCABEZADO Y BOTÓN VOLVER                   -->
+    <!-- ======================================================= -->
+    <header class="main-header">
+      <div class="header-title">
+        <a href="index.html" class="back-btn"><i data-lucide="arrow-left"></i> Volver al Menú</a>
+        <h1>ANÁLISIS TÁCTICO: ARGENTINA</h1>
+        <h2>SELECCIÓN BOLIVIA • INFORME OFICIAL</h2>
+      </div>
+      
+      <div class="matchup-box">
+        <div class="team">
+          <img src="FBF LOGO GITHUB.png" alt="Bolivia" class="team-logo">
+          <span>BOLIVIA</span>
+        </div>
+        <span class="vs">VS</span>
+        <div class="team">
+          <img src="ARG GITHUB.png" alt="Argentina" class="team-logo">
+          <span>ARGENTINA</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================= -->
+    <!-- 🚩 BANDERA: PANEL LATERAL Y REPRODUCTOR                 -->
+    <!-- ======================================================= -->
+    <div class="main-dashboard">
+
+      <!-- SUB-BANDERA: LISTA DE CLIPS Y FASES -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">FASES DEL JUEGO</h3>
+        
+        <div class="clips-list">
+          
+          <!-- 1. INICIO -->
+          <div class="phase-group">
+            <span class="phase-tag">1. Inicio</span>
+            <div class="clip-card active" onclick="loadVideo('videos/argentina_inicio1.mp4', 'Salida de 3 con interior', 'Descenso del volante para generar línea limpia.', 'Cerrar pasillo interno y saltar con extremo', 'INICIO')">
+              <h4>Salida de 3 con interior</h4>
+              <span>0:18 min</span>
+            </div>
+          </div>
+
+          <!-- 2. INICIO DINÁMICO -->
+          <div class="phase-group">
+            <span class="phase-tag">2. Inicio Dinámico</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_dinamico1.mp4', 'Aceleración tras recuperar', 'Pase filtrado directo a entrelíneas.', 'Intercalar marcas en zona de creación', 'INICIO DINÁMICO')">
+              <h4>Aceleración tras recuperar</h4>
+              <span>0:15 min</span>
+            </div>
+          </div>
+
+          <!-- 3. FASE OFENSIVA -->
+          <div class="phase-group">
+            <span class="phase-tag">3. Fase Ofensiva</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_ofensiva1.mp4', 'Ataque interior', 'Paredes cortas por carril central.', 'Apretar espacio entre líneas', 'FASE OFENSIVA')">
+              <h4>Ataque interior</h4>
+              <span>0:22 min</span>
+            </div>
+          </div>
+
+          <!-- 4. PRESIÓN -->
+          <div class="phase-group">
+            <span class="phase-tag">4. Presión</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_presion1.mp4', 'Presión tras pérdida', 'Acoso inmediato de 3 jugadores al poseedor.', 'Descargar de primera a banda libre', 'PRESIÓN')">
+              <h4>Presión tras pérdida</h4>
+              <span>0:11 min</span>
+            </div>
+          </div>
+
+          <!-- 5. FASE DEFENSIVA -->
+          <div class="phase-group">
+            <span class="phase-tag">5. Fase Defensiva</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_defensiva1.mp4', 'Repliegue en 1-4-3-3', 'Línea defensiva alta coordinada.', 'Atacar espalda de los laterales', 'FASE DEFENSIVA')">
+              <h4>Repliegue en 1-4-3-3</h4>
+              <span>0:19 min</span>
+            </div>
+          </div>
+
+          <!-- 6. ABP OFENSIVO -->
+          <div class="phase-group">
+            <span class="phase-tag">6. ABP Ofensivo</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_abp_ofensivo1.mp4', 'Córner en corto', 'Jugada ensayada para centro al segundo palo.', 'Mantener atención en cobertura de rebote', 'ABP OFENSIVO')">
+              <h4>Córner en corto</h4>
+              <span>0:14 min</span>
+            </div>
+          </div>
+
+          <!-- 7. ABP DEFENSIVO -->
+          <div class="phase-group">
+            <span class="phase-tag">7. ABP Defensivo</span>
+            <div class="clip-card" onclick="loadVideo('videos/argentina_abp_defensivo1.mp4', 'Defensa en zona en córner', 'Ocupación de área pequeña con 6 jugadores.', 'Buscar remate con entrada desde atrás', 'ABP DEFENSIVO')">
+              <h4>Defensa en zona en córner</h4>
+              <span>0:17 min</span>
+            </div>
+          </div>
+
+          <!-- 🚩 BUSCAR_AQUI: Copia un bloque de phase-group para meter más clips -->
+
+        </div>
+      </aside>
+
+      <!-- SUB-BANDERA: REPRODUCTOR DE VIDEO Y FICHA TÁCTICA -->
+      <main class="player-section">
+        
+        <div class="video-container">
+          <video id="mainVideo" controls poster="">
+            <source id="videoSource" src="videos/argentina_inicio1.mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de video.
+          </video>
+        </div>
+
+        <div class="tactical-info">
+          <div class="info-header">
+            <span id="clipPhaseBadge" class="badge">INICIO</span>
+            <h3 id="clipTitle">Salida de 3 con interior</h3>
+          </div>
+          
+          <div class="info-body">
+            <div class="info-block">
+              <h5>PATRÓN OBSERVADO</h5>
+              <p id="clipPattern">Descenso del volante para generar línea limpia.</p>
+            </div>
+            
+            <div class="info-block key-consigna">
+              <h5>CONSIGNA CLAVE PARA NOSOTROS</h5>
+              <p id="clipConsigna">Cerrar pasillo interno y saltar con extremo</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
