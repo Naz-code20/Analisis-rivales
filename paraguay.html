@@ -12,7 +12,7 @@
   <div class="dashboard-container">
 
     <!-- ======================================================= -->
-    <!-- 🚩 BANDERA: ENCABEZADO Y BOTÓN VOLVER                   -->
+    <!-- 🚩 BANDERA: ENCABEZADO Y NAVEGACIÓN                     -->
     <!-- ======================================================= -->
     <header class="main-header">
       <div class="header-title">
@@ -39,105 +39,114 @@
     <!-- ======================================================= -->
     <div class="main-dashboard">
 
-      <!-- SUB-BANDERA: LISTA DE CLIPS Y FASES -->
+      <!-- SUB-BANDERA: LISTA DESPLEGABLE DE CLIPS POR FASES -->
       <aside class="sidebar">
         <h3 class="sidebar-title">FASES DEL JUEGO</h3>
         
         <div class="clips-list">
           
-          <!-- 1. INICIO -->
-          <div class="phase-group">
-            <span class="phase-tag">1. Inicio</span>
-            <div class="clip-card active" onclick="loadVideo('videos/paraguay_inicio1.mp4', 'Salida desde fondo', 'Busca atracción con centrales para saltar a banda.', 'Tapar pase al interior derecho', 'INICIO')">
-              <h4>Salida desde fondo</h4>
-              <span>0:15 min</span>
+          <!-- FASE 1: INICIO -->
+          <details class="phase-group">
+            <summary class="phase-tag">
+              <span>1. INICIO (1 CLIP)</span>
+              <i data-lucide="chevron-down" class="chevron-icon"></i>
+            </summary>
+            <div class="phase-clips">
+              <div class="clip-card active" onclick="loadDriveVideo('https://drive.google.com/file/d/1YChG6poyAFc3q3wZmseJOhwLwBN6LpSa/view?usp=sharing', 'JUGAR CON EL CENTRAL CERCANO', 'Buscar al atacante que desciende al espacio entre líneas.', 'Presión 2-3 para forzar juego largo.', 'INICIO')">
+                <h4>Jugar con el central cercano</h4>
+                <span>Clip 1</span>
+              </div>
             </div>
-          </div>
+          </details>
 
-          <!-- 2. INICIO DINÁMICO -->
-          <div class="phase-group">
-            <span class="phase-tag">2. Inicio Dinámico</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_dinamico1.mp4', 'Transición rápida', 'Lanzamiento directo tras recuperar en medio.', 'Orientar la presión al carril opuesto', 'INICIO DINÁMICO')">
-              <h4>Transición rápida</h4>
-              <span>0:20 min</span>
+          <!-- FASE 3: FASE OFENSIVA (DESPLEGABLE CON 5 CLIPS) -->
+          <details class="phase-group" open>
+            <summary class="phase-tag">
+              <span>3. FASE OFENSIVA (5 CLIPS)</span>
+              <i data-lucide="chevron-down" class="chevron-icon"></i>
+            </summary>
+            <div class="phase-clips">
+              
+              <!-- CLIP 1 -->
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1-HCNq3izYaKMB4-N6tt3_yULHwuwdfud/view?usp=sharing', 'AMPLITUD', 'Fijar con 5 jugadores por dentro para liberar bandas.', 'Orientar juego a banda opuesta – extremo atento al viaje del balón para crear 2vs1.', 'FASE OFENSIVA')">
+                <h4>1. Amplitud</h4>
+                <span>Fase Ofensiva 1</span>
+              </div>
+
+              <!-- CLIP 2 -->
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/157uZYhvDkWsMpyrEFrBxwijMD2a7T1AR/view?usp=sharing', 'CREACIÓN PARA CENTRO BANDA DERECHA', 'Desmarque del extremo al espacio intermedio.', 'Coordinación entre lateral y mediocentro para proteger espacio intermedio.', 'FASE OFENSIVA')">
+                <h4>2. Creación para centro banda derecha</h4>
+                <span>Fase Ofensiva 2</span>
+              </div>
+
+              <!-- CLIP 3 -->
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1k4FaIG2sRl0KvfOrKt3wu5f34cLzpzDk/view?usp=sharing', 'CREAR LÍNEAS DE PASE INTERIORES', 'Sobrepoblar lado del balón y mediocentros separados para atraer rivales.', 'Bascular juntos y mediocentro evitar saltar al poseedor.', 'FASE OFENSIVA')">
+                <h4>3. Crear líneas de pase interiores</h4>
+                <span>Fase Ofensiva 3</span>
+              </div>
+
+              <!-- CLIP 4 -->
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1v6oc64bSrGv7MOjvYI3M1uzUamP-2Qx0/view?usp=sharing', 'CREAR ESPACIO PARA PASE LARGO', 'Atraer central y mediocentro para que DC ataque espacio entre centrales.', 'Evitar que Alderete juegue pases largos.', 'FASE OFENSIVA')">
+                <h4>4. Crear espacio para pase largo</h4>
+                <span>Fase Ofensiva 4</span>
+              </div>
+
+              <!-- CLIP 5 -->
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1a8cUq1BJK93fjRJDDDdTobwW185RDbxb/view?usp=sharing', 'SUPERIORIDAD CUALITATIVA EN BANDA IZQUIERDA', 'Juntarse para romper al espacio.', 'Crear superioridad numérica en banda.', 'FASE OFENSIVA')">
+                <h4>5. Superioridad banda izquierda</h4>
+                <span>Fase Ofensiva 5</span>
+              </div>
+
             </div>
-          </div>
+          </details>
 
-          <!-- 3. FASE OFENSIVA -->
-          <div class="phase-group">
-            <span class="phase-tag">3. Fase Ofensiva</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_ofensiva1.mp4', 'Ataque por bandas', 'Centros pasados al segundo poste.', 'Asegurar marca estrecha en área', 'FASE OFENSIVA')">
-              <h4>Ataque por bandas</h4>
-              <span>0:18 min</span>
+          <!-- FASE: TRANSICIÓN OFENSIVA -->
+          <details class="phase-group">
+            <summary class="phase-tag">
+              <span>TRANSICIÓN OFENSIVA (2 CLIPS)</span>
+              <i data-lucide="chevron-down" class="chevron-icon"></i>
+            </summary>
+            <div class="phase-clips">
+              
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1Dhbjxj7XtGfRNvIVWXiF7RG-G4hkkZOM/view?usp=sharing', 'DESDE ZONA A', '3 jugadores atacan los espacios.', 'Vigilancia del lado opuesto.', 'TRANSICIÓN OFENSIVA')">
+                <h4>Transición desde Zona A</h4>
+                <span>Transición 1</span>
+              </div>
+
+              <div class="clip-card" onclick="loadDriveVideo('https://drive.google.com/file/d/1t9WqIvZCOj4W_BUHkHEwglTBm5xA0xrM/view?usp=sharing', 'DESDE ZONA B', 'Terminan sus ataques en banda izquierda.', 'Seguridad defensiva banda derecha nuestra.', 'TRANSICIÓN OFENSIVA')">
+                <h4>Transición desde Zona B</h4>
+                <span>Transición 2</span>
+              </div>
+
             </div>
-          </div>
-
-          <!-- 4. PRESIÓN -->
-          <div class="phase-group">
-            <span class="phase-tag">4. Presión</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_presion1.mp4', 'Presión alta en salida', 'Bloque alto orientando al carril central.', 'Juego directo a espalda de pivotes', 'PRESIÓN')">
-              <h4>Presión alta en salida</h4>
-              <span>0:14 min</span>
-            </div>
-          </div>
-
-          <!-- 5. FASE DEFENSIVA -->
-          <div class="phase-group">
-            <span class="phase-tag">5. Fase Defensiva</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_defensiva1.mp4', 'Bloque medio 1-4-4-2', 'Espacio entre líneas aprovechable en basculación.', 'Explotar espalda del volante 6', 'FASE DEFENSIVA')">
-              <h4>Bloque medio 1-4-4-2</h4>
-              <span>0:22 min</span>
-            </div>
-          </div>
-
-          <!-- 6. ABP OFENSIVO -->
-          <div class="phase-group">
-            <span class="phase-tag">6. ABP Ofensivo</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_abp_ofensivo1.mp4', 'Córner al primer poste', 'Peinada en primer palo hacia zona de remate.', 'Bloquear la zona cero y vigilancia', 'ABP OFENSIVO')">
-              <h4>Córner al primer poste</h4>
-              <span>0:12 min</span>
-            </div>
-          </div>
-
-          <!-- 7. ABP DEFENSIVO -->
-          <div class="phase-group">
-            <span class="phase-tag">7. ABP Defensivo</span>
-            <div class="clip-card" onclick="loadVideo('videos/paraguay_abp_defensivo1.mp4', 'Marca mixta en tiro libre', 'Línea adelantada propensa a balones colgados.', 'Atacar zona entre portero y defensa', 'ABP DEFENSIVO')">
-              <h4>Marca mixta tiro libre</h4>
-              <span>0:16 min</span>
-            </div>
-          </div>
-
-          <!-- 🚩 BUSCAR_AQUI: Copia un bloque de phase-group para meter más clips -->
+          </details>
 
         </div>
       </aside>
 
-      <!-- SUB-BANDERA: REPRODUCTOR DE VIDEO Y FICHA TÁCTICA -->
+      <!-- SUB-BANDERA: REPRODUCTOR DE DRIVE Y FICHA TÁCTICA -->
       <main class="player-section">
         
+        <!-- Frame Adaptado para Google Drive -->
         <div class="video-container">
-          <video id="mainVideo" controls poster="">
-            <source id="videoSource" src="videos/paraguay_inicio1.mp4" type="video/mp4">
-            Tu navegador no soporta reproducción de video.
-          </video>
+          <iframe id="driveFrame" src="https://drive.google.com/file/d/1YChG6poyAFc3q3wZmseJOhwLwBN6LpSa/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <div class="tactical-info">
           <div class="info-header">
             <span id="clipPhaseBadge" class="badge">INICIO</span>
-            <h3 id="clipTitle">Salida desde fondo</h3>
+            <h3 id="clipTitle">JUGAR CON EL CENTRAL CERCANO</h3>
           </div>
           
           <div class="info-body">
             <div class="info-block">
               <h5>PATRÓN OBSERVADO</h5>
-              <p id="clipPattern">Busca atracción con centrales para saltar a banda.</p>
+              <p id="clipPattern">Buscar al atacante que desciende al espacio entre líneas.</p>
             </div>
             
             <div class="info-block key-consigna">
               <h5>CONSIGNA CLAVE PARA NOSOTROS</h5>
-              <p id="clipConsigna">Tapar pase al interior derecho</p>
+              <p id="clipConsigna">Presión 2-3 para forzar juego largo.</p>
             </div>
           </div>
         </div>
@@ -149,5 +158,26 @@
   </div>
 
   <script src="script.js"></script>
+  
+  <!-- Script especial para cargar videos embebidos de Google Drive sin bloqueos -->
+  <script>
+    function loadDriveVideo(driveUrl, title, pattern, consigna, phase) {
+      // Convertir la URL de compartir de Drive a la URL de previsualización (preview)
+      const fileId = driveUrl.split('/d/')[1].split('/')[0];
+      const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+
+      document.getElementById('driveFrame').src = previewUrl;
+      document.getElementById('clipTitle').innerText = title;
+      document.getElementById('clipPattern').innerText = pattern;
+      document.getElementById('clipConsigna').innerText = consigna;
+      document.getElementById('clipPhaseBadge').innerText = phase;
+
+      document.querySelectorAll('.clip-card').forEach(card => card.classList.remove('active'));
+      if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
+      }
+    }
+  </script>
+
 </body>
 </html>
